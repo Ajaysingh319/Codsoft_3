@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-gradient);
+    transition: background 0.3s, color 0.3s;
+}
+
+:root {
+    --background-gradient: linear-gradient(45deg, #eae8e8, #f1f2f3);
+    --text-color: #0a0313;
+    --button-background: transparent;
+    --button-text-color: #020815;
+    --button-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    --input-background: transparent;
+    --input-placeholder: #06010f;
+}
+
+body.dark-mode {
+    --background-gradient: linear-gradient(45deg, #2e2e2e, #3a3a3a);
+    --text-color: #f1f1f1;
+    --button-background: #555;
+    --button-text-color: #eee;
+    --button-shadow: -8px -8px 15px rgba(0, 0, 0, 0.1);
+    --input-background: #444;
+    --input-placeholder: #bbb;
+}
+
+.calculator {
+    border: 1px solid #012b03;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--button-background);
+    box-shadow: 0px 3px 15px rgba(242, 241, 237, 0.5);
+}
+
+input {
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: var(--input-background);
+    box-shadow: 0px, 3px, 15px rgba(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+input::placeholder {
+    color: var(--input-placeholder);
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    font-size: 20px;
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.equalBtn {
+    background-color: #c25816;
+}
+
+.operator {
+    color: #d26c0d;
+}
+
+#toggle-mode {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: 1px solid #012b03;
+    border-radius: 5px;
+    box-shadow: var(--button-shadow);
+}
